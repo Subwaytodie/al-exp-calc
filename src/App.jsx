@@ -83,12 +83,7 @@ function App() {
       }}>Oil & Experience Calculator</h1>
       
       
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)', 
-        gap: '10px',
-        padding: '5px'
-        }}>
+      <div className = 'calculator-grid'>
         <div>
           <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
             Current Level:
@@ -146,54 +141,43 @@ function App() {
 
         {/* CHECKBOXES TO ALTER CALCULATIONS */}
         {/* THE RIGHT COLUMN CONTROLLER */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', width: '100%' }}>
+        <div>
   
   
 
           {/* 2. THE CLEAN INNER GRID CONTAINER */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr 1fr',       // 2 equal columns side-by-side
-            gap: '8px 12px',                      // 8px vertical spacing, 12px horizontal spacing
-            padding: '8px 0',                     // Small room to breathe inside
-            boxSizing: 'border-box'
-            }}>
-    
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#cbd5e1', cursor: 'pointer', lineHeight: '1.2' }}>
+          <div className="checkbox-grid">
+            <label className="checkbox-label">
               <input type="checkbox" style={{ cursor: 'pointer' }} onChange={(e) => 
               { const checkValue = e.target.checked;
                 setDrCheck(checkValue);
                 const newMaxValue = checkValue ? activeLevel.trueValue : activeLevel.falseValue;
                 if (newMaxValue < experienceCurrent){
                   setExperienceCurrent(newMaxValue);
-
                 }
-          
               }} />
-              <span style={{ whiteSpace: 'normal' }}>Is the ship UR/DR?</span>
+              <span>Is the ship UR/DR?</span>
             </label>
 
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#cbd5e1', cursor: 'pointer', lineHeight: '1.2' }}>
-              <input type="checkbox" style={{ cursor: 'pointer' }} onChange={(e) => setFlagCheck(e.target.checked)}/>
-              <span style={{ whiteSpace: 'normal' }}>Flagship?</span>
+            <label className="checkbox-label">
+              <input type="checkbox" onChange={(e) => setFlagCheck (e.target.checked)}/>
+              <span>Flagship?</span>
             </label>
 
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#cbd5e1', cursor: 'pointer', lineHeight: '1.2' }}>
-              <input type="checkbox" style={{ cursor: 'pointer' }} onChange={(e) => setFleetCheck(e.target.checked)}/>
-              <span style={{ whiteSpace: 'normal' }}>Using only 1 Fleet?</span>
+            <label className="checkbox-label">
+              <input type="checkbox" onChange={(e) => setFleetCheck (e.target.checked)}/>
+              <span>Using only 1 Fleet?</span>
             </label>
 
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#cbd5e1', cursor: 'pointer', lineHeight: '1.2' }}>
-              <input type="checkbox" style={{ cursor: 'pointer' }} onChange={(e) => setMoodCheck(e.target.checked)}/>
-              <span style={{ whiteSpace: 'normal' }}>{"Mood > 120?"}</span>
+            <label className="checkbox-label">
+              <input type="checkbox" onChange={(e) => setMoodCheck (e.target.checked)}/>
+              <span>{"Mood > 120?"}</span>
             </label>
 
-            {/* The 5th item safely spans the full bottom row so it doesn't compress columns */}
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#cbd5e1', gridColumn: 'span 2', cursor: 'pointer', lineHeight: '1.2' }}>
-              <input type="checkbox" style={{ cursor: 'pointer' }} onChange={(e) => setMvpCheck(e.target.checked)}/>
-              <span style={{ whiteSpace: 'normal' }}>Are you MVP maxing?</span>
+            <label className="checkbox-label full-span">
+              <input type="checkbox" onChange={(e) => setMvpCheck (e.target.checked)}/>
+              <span>Are you MVP maxing?</span>
             </label>
-
           </div>
         </div>
       </div>

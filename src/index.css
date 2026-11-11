@@ -152,16 +152,32 @@ select {
 /* 4. Global Structural Classes for Grids */
 .calculator-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Forces an exact 50/50 split */
   gap: 16px;
   width: 100%;
   box-sizing: border-box;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 10px;
   width: 100%;
+  box-sizing: border-box;
 }
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.checkbox-label.full-span {
+  grid-column: span 2;
+}
+
 
