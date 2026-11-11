@@ -90,13 +90,14 @@ function App() {
           <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
             Current Level:
           </label>
-          <input style={{ padding: '10px', width: '100%', boxSizing: 'border-box', borderRadius: '4px', border: '1px solid #ccc'}}
+          <input style={{ padding: '10px', width: '100%', boxSizing: 'border-box', borderRadius: '4px', border: '1px solid #ccc', marginBottom: '5px'}}
             type="number" 
             value={currentLevel} 
             min="1" 
             max="124" 
             onChange={(e) => handleTypingChange(e, setCurrentLevel)}
             onBlur={(e) => handleFinalValidation(e, 1, 124, setCurrentLevel)}/>
+          Current Experience:
           <input type="range" value ={experienceCurrent} max={expValue} onChange={(e) => handleTypingChange(e, setExperienceCurrent)}/>
           <input className='slider-value-input'
             type="number" 
