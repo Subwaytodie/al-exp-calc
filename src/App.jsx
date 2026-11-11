@@ -97,7 +97,9 @@ function App() {
             max="124" 
             onChange={(e) => handleTypingChange(e, setCurrentLevel)}
             onBlur={(e) => handleFinalValidation(e, 1, 124, setCurrentLevel)}/>
-          Current Experience:
+          <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
+            Current Experience:
+          </label>
           <input type="range" value ={experienceCurrent} max={expValue} onChange={(e) => handleTypingChange(e, setExperienceCurrent)}/>
           <input className='slider-value-input'
             type="number" 
