@@ -20,8 +20,7 @@ function App() {
   const maxArray = Number(targetLevel)-1;
   //getting experience needed for level up to the next level from the current level
   const activeLevel = experienceConditionalValues[minArray];
-  const expValue = (drCheck ? activeLevel?.trueValue : activeLevel?.falseValue) ?? 0;
-  console.log(activeLevel,expValue);  
+  const expValue = (drCheck ? activeLevel?.trueValue : activeLevel?.falseValue) ?? 0;  
   //clamping the input
   const clampRange = (input, minVal, maxVal) => {
     const minNumber = Number(minVal);
