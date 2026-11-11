@@ -69,9 +69,11 @@ function App() {
   
   //website layout itself below here
   return (
-    <>
+  <>
     <header className="top-bar">
-      Credits to Suchiguma for the initial Experience Values on which this calculator is based on. You can find his stuff here: <a href="https://suchiguma.github.io/home/home-page/">https://suchiguma.github.io/home/home-page/</a>  </header>
+      Credits to Suchiguma for the initial Experience Values on which this calculator is based on. You can find his stuff here: 
+        <a href="https://suchiguma.github.io/home/home-page/">https://suchiguma.github.io/home/home-page/</a>
+      </header>
 
     <div style={{ padding: '40px', maxWidth: '600px', margin: '0 auto', fontFamily: 'sans-serif' }}>
       <h1 style={{ 
@@ -221,7 +223,7 @@ function App() {
         )*/}
       </div>
     </div>
-    </>
+  </>
   );
   
 }
