@@ -11,12 +11,21 @@ html, body, #root {
 .top-bar {
   width: 100%;
   box-sizing: border-box;
-  background-color: #1a1a1a;       
-  border-bottom: 1px solid #475569; 
-  padding: 16px 32px;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #475569;
+  padding: 8px 20px;             /* Slightly tighter padding for mobile screens */
   color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 17px;                /* Smaller, cleaner text size for credits */
+  line-height: 1.4;               /* Prevents wrapped lines from touching */
+  overflow-wrap: break-word;      /* Forces long URLs to break onto the next line */
+  word-break: break-word; 
+  text-align: center;
+  font-weight: bold;        /* Backup rule for older mobile browsers */
+}
+
+.top-bar a {
+  color: #93c5fd;                 /* Soft light-blue link color that fits your dark theme */
+  text-decoration: underline;
 }
 
 
