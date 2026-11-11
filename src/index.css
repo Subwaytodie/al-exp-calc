@@ -8,6 +8,17 @@ html, body, #root {
   font-family: sans-serif;
 }
 
+.top-bar {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #2a2a2a;       
+  border-bottom: 1px solid #475569; 
+  padding: 16px 32px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 /* 2. Global Input Boxes Style (Applied to ALL number boxes automatically) */
 input[type="number"] {

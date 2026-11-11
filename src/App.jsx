@@ -69,6 +69,11 @@ function App() {
   
   //website layout itself below here
   return (
+    <>
+    <header className="top-bar">
+      Credits to Suchiguma for the initial Experience Values on which this calculator is based on. You can find his stuff here: <a href="https://suchiguma.github.io/home/home-page/" />
+    </header>
+
     <div style={{ padding: '40px', maxWidth: '600px', margin: '0 auto', fontFamily: 'sans-serif' }}>
       <h1 style={{ 
       lineHeight: '1.3',      // Crucial: Gives enough vertical space when text wraps
@@ -214,7 +219,9 @@ function App() {
         )*/}
       </div>
     </div>
+    </>
   );
+  
 }
 
 export default App;
